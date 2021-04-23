@@ -11,3 +11,10 @@ def add(request):
     res = val1+val2
     
     return render(request, 'result.html', {'result' : res})
+
+def sub(request):
+    val1 = int(request.POST['value1'])
+    val2 = int(request.POST['value2'])
+    res = val1-val2
+    
+    return render(request, 'result.html', {'result' : res})
